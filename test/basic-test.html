@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <link rel="import" href="../http-method-label.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <http-method-label method="get"></http-method-label>
+        <http-method-label method="POST"></http-method-label>
+        <http-method-label method="Put"></http-method-label>
+        <http-method-label method="delete"></http-method-label>
+        <http-method-label method="patch"></http-method-label>
+        <http-method-label method="test"></http-method-label>
+      </template>
+    </test-fixture>
+    //
+    <script>
+    /* global fixture, assert */
+    suite('basic', function() {
+      test('Should have unique colors', function() {
+        var elements = fixture('basic');
+        var colors = [];
+        for (var i = 0, len = elements.length; i < len; i++) {
+          colors.push(elements[i].getComputedStyleValue('color'));
+        }
+        var filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+      });
+
+      test('Should have unique background colors', function() {
+        var elements = fixture('basic');
+        var colors = [];
+        for (var i = 0, len = elements.length; i < len; i++) {
+          colors.push(elements[i].getComputedStyleValue('background-color'));
+        }
+        var filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+      });
+    });
+    </script>
+
+  </body>
+</html>
