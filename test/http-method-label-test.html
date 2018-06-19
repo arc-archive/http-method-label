@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>http-method-label test</title>
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../http-method-label.html">
+</head>
+<body>
+  <test-fixture id="Basic">
+    <template>
+      <http-method-label method="get"></http-method-label>
+      <http-method-label method="POST"></http-method-label>
+      <http-method-label method="Put"></http-method-label>
+      <http-method-label method="delete"></http-method-label>
+      <http-method-label method="patch"></http-method-label>
+      <http-method-label method="test"></http-method-label>
+    </template>
+  </test-fixture>
+
+  <script>
+  /* global fixture, assert */
+  suite('basic', function() {
+    test('Should have unique colors', function(done) {
+      const elements = fixture('Basic');
+      flush(() => {
+        const colors = [];
+        for (let i = 0, len = elements.length; i < len; i++) {
+          colors.push(getComputedStyle(elements[i]).color);
+        }
+        const filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+        done();
+      });
+    });
+
+    test('Should have unique background colors', function(done) {
+      const elements = fixture('Basic');
+      flush(() => {
+        const colors = [];
+        for (let i = 0, len = elements.length; i < len; i++) {
+          colors.push(getComputedStyle(elements[i]).backgroundColor);
+        }
+        const filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+        done();
+      });
+    });
+  });
+  </script>
+</body>
+</html>
