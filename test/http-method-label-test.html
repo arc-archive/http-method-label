@@ -6,6 +6,7 @@
   <title>http-method-label test</title>
   <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
   <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../../polymer/lib/legacy/class.html">
   <link rel="import" href="../http-method-label.html">
 </head>
 <body>
@@ -20,10 +21,16 @@
     </template>
   </test-fixture>
 
+  <test-fixture id="AriaLabels">
+    <template>
+      <http-method-label method="get"></http-method-label>
+    </template>
+  </test-fixture>
+
   <script>
   /* global fixture, assert */
   suite('basic', function() {
-    test('Should have unique colors', function(done) {
+    test('Has unique colors', function(done) {
       const elements = fixture('Basic');
       flush(() => {
         const colors = [];
@@ -38,7 +45,7 @@
       });
     });
 
-    test('Should have unique background colors', function(done) {
+    test('Has unique background colors', function(done) {
       const elements = fixture('Basic');
       flush(() => {
         const colors = [];
@@ -52,7 +59,33 @@
         done();
       });
     });
+
+    test('Sets title attribute on label change', function() {
+      const element = fixture('AriaLabels');
+      assert.isTrue(element.hasAttribute('title'), 'Has title attribute');
+      assert.equal(element.getAttribute('title'), 'get');
+    });
+
+    test('Removes title attribute', function() {
+      const element = fixture('AriaLabels');
+      element.method = undefined;
+      assert.isFalse(element.hasAttribute('title'));
+    });
+
+    test('Sets arial-label attribute on label change', function() {
+      const element = fixture('AriaLabels');
+      assert.isTrue(element.hasAttribute('aria-label'), 'Has arial-label attribute');
+      assert.equal(element.getAttribute('aria-label'), 'get');
+    });
+
+    test('Removes arial-label attribute', function() {
+      const element = fixture('AriaLabels');
+      element.method = undefined;
+      assert.isFalse(element.hasAttribute('aria-label'));
+    });
   });
+
+  a11ySuite('AriaLabels');
   </script>
 </body>
 </html>

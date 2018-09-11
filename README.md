@@ -11,6 +11,8 @@ A HTTP method name display label for lists
 <custom-element-demo>
   <template>
     <link rel="import" href="http-method-label.html">
+    <link rel="import" href="../shadycss/apply-shim.html">
+    <link rel="import" href="../polymer/lib/elements/custom-style.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>

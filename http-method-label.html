@@ -121,9 +121,23 @@ the License.
          */
         method: {
           type: String,
-          reflectToAttribute: true
+          reflectToAttribute: true,
+          observer: '_updateAccessibility'
         }
       };
+    }
+    /**
+     * Updates "title" and `aria-label` atrributes when method changes.
+     * @param {String} method Current method
+     */
+    _updateAccessibility(method) {
+      if (!method) {
+        this.removeAttribute('title');
+        this.removeAttribute('aria-label');
+      } else {
+        this.setAttribute('title', method);
+        this.setAttribute('aria-label', method);
+      }
     }
   }
   window.customElements.define(HttpMethodLabel.is, HttpMethodLabel);

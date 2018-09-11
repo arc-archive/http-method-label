@@ -65,6 +65,13 @@ declare namespace UiElements {
      * HTTP method name to display
      */
     method: string|null|undefined;
+
+    /**
+     * Updates "title" and `aria-label` atrributes when method changes.
+     *
+     * @param method Current method
+     */
+    _updateAccessibility(method: String|null): void;
   }
 }
 
