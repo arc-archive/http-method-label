@@ -9,6 +9,7 @@
  */
 
 /// <reference path="../polymer/types/polymer-element.d.ts" />
+/// <reference path="http-method-label-common-styles.d.ts" />
 
 declare namespace UiElements {
 
@@ -41,8 +42,11 @@ declare namespace UiElements {
    * Custom property | Description | Default
    * ----------------|-------------|----------
    * `--http-method-label` | Mixin applied to the HTTP method | `{}`
+   * `--http-method-label-padding` | Padding of the label item | `2px 6px`
    * `--http-method-label-color` | Color of the HTTP method | `rgb(128, 128, 128)`
    * `--http-method-label-background-color` | Background color of the HTTP method | `rgba(128, 128, 128, 0.12)`
+   * `--http-method-label-border-radius` | Border radius on the label | `3px`
+   * `--http-method-label-font-weigth` | Label font weight | `400`
    * `--http-method-label-get` | Mixin applied to the `GET` HTTP method | `{}`
    * `--http-method-label-get-color` | Color of the `GET` HTTP method | `rgb(0, 128, 0)`
    * `--http-method-label-get-background-color` | Background color of the `GET` HTTP method | `rgba(0, 128, 0, 0.12)`
@@ -58,6 +62,18 @@ declare namespace UiElements {
    * `--http-method-label-patch` | Mixin applied to the `PATCH` HTTP method | `{}`
    * `--http-method-label-patch-color` | Color of the `PATCH` HTTP method | `rgb(156, 39, 176)`
    * `--http-method-label-patch-background-color` | Background color of the `PATCH` HTTP method | `rgba(156, 39, 176, 0.12)`
+   * `--http-method-label-options` | Mixin applied to the `OPTIONS` HTTP method | `{}`
+   * `--http-method-label-options-color` | Color of the `OPTIONS` HTTP method | `rgb(128, 128, 128)`
+   * `--http-method-label-options-background-color` | Background color of the `OPTIONS` HTTP method | `rgba(128, 128, 128, 0.12)`
+   * `--http-method-label-head` | Mixin applied to the `HEAD` HTTP method | `{}`
+   * `--http-method-label-head-color` | Color of the `HEAD` HTTP method | `rgb(128, 128, 128)`
+   * `--http-method-label-head-background-color` | Background color of the `HEAD` HTTP method | `rgba(128, 128, 128, 0.12)`
+   * `--http-method-label-trace` | Mixin applied to the `TRACE` HTTP method | `{}`
+   * `--http-method-label-trace-color` | Color of the `TRACE` HTTP method | `rgb(128, 128, 128)`
+   * `--http-method-label-trace-background-color` | Background color of the `TRACE` HTTP method | `rgba(128, 128, 128, 0.12)`
+   * `--http-method-label-connect` | Mixin applied to the `CONNECT` HTTP method | `{}`
+   * `--http-method-label-connect-color` | Color of the `CONNECT` HTTP method | `rgb(128, 128, 128)`
+   * `--http-method-label-connect-background-color` | Background color of the `CONNECT` HTTP method | `rgba(128, 128, 128, 0.12)`
    */
   class HttpMethodLabel extends Polymer.Element {
 
