@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "elements": [
     {
-      "description": "The element displays a label for the HTTP method. If the method is one of the\npredefined methods then it will use predefined colors to mark the method.\n\n### Example\n\n```html\n<http-method-label method=\"GET\"></http-method-label>\n```\n\nIf the method is not one of the predefined methods it can be styled using regular\ncss.\n\n```html\n<style>\nhttp-method-label[method=\"test\"] {\n   color: white;\n   background-color: orange;\n}\n</style>\n<http-method-label method=\"TEST\"></http-method-label>\n```\n\n### Styling\n`<http-method-label>` provides the following custom properties and mixins for styling:\n\nCustom property | Description | Default\n----------------|-------------|----------\n`--http-method-label` | Mixin applied to the HTTP method | `{}`\n`--http-method-label-color` | Color of the HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-background-color` | Background color of the HTTP method | `rgba(128, 128, 128, 0.12)`\n`--http-method-label-get` | Mixin applied to the `GET` HTTP method | `{}`\n`--http-method-label-get-color` | Color of the `GET` HTTP method | `rgb(0, 128, 0)`\n`--http-method-label-get-background-color` | Background color of the `GET` HTTP method | `rgba(0, 128, 0, 0.12)`\n`--http-method-label-post` | Mixin applied to the `POST` HTTP method | `{}`\n`--http-method-label-post-color` | Color of the `POST` HTTP method | `rgb(33, 150, 243)`\n`--http-method-label-post-background-color` | Background color of the `POST` HTTP method | `rgba(33, 150, 243, 0.12)`\n`--http-method-label-put` | Mixin applied to the `PUT` HTTP method | `{}`\n`--http-method-label-put-color` | Color of the `PUT` HTTP method | `rgb(255, 165, 0)`\n`--http-method-label-put-background-color` | Background color of the `PUT` HTTP method | `rgba(255, 165, 0, 0.12)`\n`--http-method-label-delete` | Mixin applied to the `DELETE` HTTP method | `{}`\n`--http-method-label-delete-color` | Color of the `DELETE` HTTP method | `rgb(244, 67, 54)`\n`--http-method-label-delete-background-color` | Background color of the `DELETE` HTTP method | `rgba(244, 67, 54, 0.12)`\n`--http-method-label-patch` | Mixin applied to the `PATCH` HTTP method | `{}`\n`--http-method-label-patch-color` | Color of the `PATCH` HTTP method | `rgb(156, 39, 176)`\n`--http-method-label-patch-background-color` | Background color of the `PATCH` HTTP method | `rgba(156, 39, 176, 0.12)`",
+      "description": "The element displays a label for the HTTP method. If the method is one of the\npredefined methods then it will use predefined colors to mark the method.\n\n### Example\n\n```html\n<http-method-label method=\"GET\"></http-method-label>\n```\n\nIf the method is not one of the predefined methods it can be styled using regular\ncss.\n\n```html\n<style>\nhttp-method-label[method=\"test\"] {\n   color: white;\n   background-color: orange;\n}\n</style>\n<http-method-label method=\"TEST\"></http-method-label>\n```\n\n### Styling\n`<http-method-label>` provides the following custom properties and mixins for styling:\n\nCustom property | Description | Default\n----------------|-------------|----------\n`--http-method-label` | Mixin applied to the HTTP method | `{}`\n`--http-method-label-padding` | Padding of the label item | `2px 6px`\n`--http-method-label-color` | Color of the HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-background-color` | Background color of the HTTP method | `rgba(128, 128, 128, 0.12)`\n`--http-method-label-border-radius` | Border radius on the label | `3px`\n`--http-method-label-font-weigth` | Label font weight | `400`\n`--http-method-label-get` | Mixin applied to the `GET` HTTP method | `{}`\n`--http-method-label-get-color` | Color of the `GET` HTTP method | `rgb(0, 128, 0)`\n`--http-method-label-get-background-color` | Background color of the `GET` HTTP method | `rgba(0, 128, 0, 0.12)`\n`--http-method-label-post` | Mixin applied to the `POST` HTTP method | `{}`\n`--http-method-label-post-color` | Color of the `POST` HTTP method | `rgb(33, 150, 243)`\n`--http-method-label-post-background-color` | Background color of the `POST` HTTP method | `rgba(33, 150, 243, 0.12)`\n`--http-method-label-put` | Mixin applied to the `PUT` HTTP method | `{}`\n`--http-method-label-put-color` | Color of the `PUT` HTTP method | `rgb(255, 165, 0)`\n`--http-method-label-put-background-color` | Background color of the `PUT` HTTP method | `rgba(255, 165, 0, 0.12)`\n`--http-method-label-delete` | Mixin applied to the `DELETE` HTTP method | `{}`\n`--http-method-label-delete-color` | Color of the `DELETE` HTTP method | `rgb(244, 67, 54)`\n`--http-method-label-delete-background-color` | Background color of the `DELETE` HTTP method | `rgba(244, 67, 54, 0.12)`\n`--http-method-label-patch` | Mixin applied to the `PATCH` HTTP method | `{}`\n`--http-method-label-patch-color` | Color of the `PATCH` HTTP method | `rgb(156, 39, 176)`\n`--http-method-label-patch-background-color` | Background color of the `PATCH` HTTP method | `rgba(156, 39, 176, 0.12)`\n`--http-method-label-options` | Mixin applied to the `OPTIONS` HTTP method | `{}`\n`--http-method-label-options-color` | Color of the `OPTIONS` HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-options-background-color` | Background color of the `OPTIONS` HTTP method | `rgba(128, 128, 128, 0.12)`\n`--http-method-label-head` | Mixin applied to the `HEAD` HTTP method | `{}`\n`--http-method-label-head-color` | Color of the `HEAD` HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-head-background-color` | Background color of the `HEAD` HTTP method | `rgba(128, 128, 128, 0.12)`\n`--http-method-label-trace` | Mixin applied to the `TRACE` HTTP method | `{}`\n`--http-method-label-trace-color` | Color of the `TRACE` HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-trace-background-color` | Background color of the `TRACE` HTTP method | `rgba(128, 128, 128, 0.12)`\n`--http-method-label-connect` | Mixin applied to the `CONNECT` HTTP method | `{}`\n`--http-method-label-connect-color` | Color of the `CONNECT` HTTP method | `rgb(128, 128, 128)`\n`--http-method-label-connect-background-color` | Background color of the `CONNECT` HTTP method | `rgba(128, 128, 128, 0.12)`",
       "summary": "",
       "path": "http-method-label.html",
       "properties": [
@@ -611,11 +611,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 121,
+              "line": 135,
               "column": 8
             },
             "end": {
-              "line": 125,
+              "line": 139,
               "column": 9
             }
           },
@@ -2811,11 +2811,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 132,
+              "line": 146,
               "column": 4
             },
             "end": {
-              "line": 140,
+              "line": 154,
               "column": 5
             }
           },
@@ -3776,11 +3776,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 114,
+          "line": 128,
           "column": 2
         },
         "end": {
-          "line": 141,
+          "line": 155,
           "column": 3
         }
       },
@@ -3793,11 +3793,11 @@
           "description": "HTTP method name to display",
           "sourceRange": {
             "start": {
-              "line": 121,
+              "line": 135,
               "column": 8
             },
             "end": {
-              "line": 125,
+              "line": 139,
               "column": 9
             }
           },
