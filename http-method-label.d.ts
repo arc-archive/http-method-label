@@ -5,14 +5,13 @@
  *   https://github.com/Polymer/tools/tree/master/packages/gen-typescript-declarations
  *
  * To modify these typings, edit the source file(s):
- *   http-method-label.html
+ *   http-method-label.js
  */
 
 
 // tslint:disable:variable-name Describing an API that's defined elsewhere.
 
-/// <reference path="../polymer/types/polymer-element.d.ts" />
-/// <reference path="http-method-label-common-styles.d.ts" />
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 
 declare namespace UiElements {
 
@@ -78,7 +77,7 @@ declare namespace UiElements {
    * `--http-method-label-connect-color` | Color of the `CONNECT` HTTP method | `rgb(128, 128, 128)`
    * `--http-method-label-connect-background-color` | Background color of the `CONNECT` HTTP method | `rgba(128, 128, 128, 0.12)`
    */
-  class HttpMethodLabel extends Polymer.Element {
+  class HttpMethodLabel extends PolymerElement {
 
     /**
      * HTTP method name to display
@@ -94,6 +93,9 @@ declare namespace UiElements {
   }
 }
 
-interface HTMLElementTagNameMap {
-  "http-method-label": UiElements.HttpMethodLabel;
+declare global {
+
+  interface HTMLElementTagNameMap {
+    "http-method-label": UiElements.HttpMethodLabel;
+  }
 }

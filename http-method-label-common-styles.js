@@ -1,10 +1,13 @@
-<link rel="import" href="../polymer/polymer-element.html">
-<dom-module id="http-method-label-common-styles">
+import '@polymer/polymer/polymer-element.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<dom-module id="http-method-label-common-styles">
   <template>
     <style>
     :host {
       --method-label-default-background-color: rgba(128, 128, 128, 0.12);
       --method-label-default-color: rgb(128, 128, 128);
+
       --method-label-common-style: {
         display: inline-block;
         margin: var(--http-method-label-margin, 0px 8px 8px 0px);
@@ -124,4 +127,6 @@
     }
     </style>
   </template>
-</dom-module>
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
