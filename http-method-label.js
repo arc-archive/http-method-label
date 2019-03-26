@@ -11,57 +11,9 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations under
 the License.
 */
-import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {PolymerElement} from '../../@polymer/polymer/polymer-element.js';
+import {html} from '../../@polymer/polymer/lib/utils/html-tag.js';
 import './http-method-label-common-styles.js';
-const $_documentContainer = document.createElement('template');
-$_documentContainer.innerHTML = `<dom-module id="http-method-label">
-  <template strip-whitespace="">
-    <style include="http-method-label-common-styles">
-    :host {
-      @apply --method-label-common-style;
-    }
-
-    :host([method="get"]) {
-      @apply --method-label-get;
-    }
-
-    :host([method="post"]) {
-      @apply --method-label-post;
-    }
-
-    :host([method="put"]) {
-      @apply --method-label-put;
-    }
-
-    :host([method="delete"]) {
-      @apply --method-label-delete;
-    }
-
-    :host([method="patch"]) {
-      @apply --method-label-patch;
-    }
-
-    :host([method="options"]) {
-      @apply --method-label-options;
-    }
-
-    :host([method="head"]) {
-      @apply --method-label-head;
-    }
-
-    :host([method="trace"]) {
-      @apply --method-label-trace;
-    }
-
-    :host([method="connect"]) {
-      @apply --method-label-connect;
-    }
-    </style>
-    [[method]]
-  </template>
-</dom-module>`;
-
-document.head.appendChild($_documentContainer.content);
 /**
  * The element displays a label for the HTTP method. If the method is one of the
  * predefined methods then it will use predefined colors to mark the method.
@@ -130,7 +82,51 @@ document.head.appendChild($_documentContainer.content);
  * @demo demo/index.html
  */
 class HttpMethodLabel extends PolymerElement {
-  static get is() {return 'http-method-label';}
+  static get template() {
+    return html`<style include="http-method-label-common-styles">
+    :host {
+      @apply --method-label-common-style;
+    }
+
+    :host([method="get"]) {
+      @apply --method-label-get;
+    }
+
+    :host([method="post"]) {
+      @apply --method-label-post;
+    }
+
+    :host([method="put"]) {
+      @apply --method-label-put;
+    }
+
+    :host([method="delete"]) {
+      @apply --method-label-delete;
+    }
+
+    :host([method="patch"]) {
+      @apply --method-label-patch;
+    }
+
+    :host([method="options"]) {
+      @apply --method-label-options;
+    }
+
+    :host([method="head"]) {
+      @apply --method-label-head;
+    }
+
+    :host([method="trace"]) {
+      @apply --method-label-trace;
+    }
+
+    :host([method="connect"]) {
+      @apply --method-label-connect;
+    }
+    </style>
+    [[method]]`;
+  }
+
   static get properties() {
     return {
       /**
@@ -157,4 +153,4 @@ class HttpMethodLabel extends PolymerElement {
     }
   }
 }
-window.customElements.define(HttpMethodLabel.is, HttpMethodLabel);
+window.customElements.define('http-method-label', HttpMethodLabel);

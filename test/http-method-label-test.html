@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
   <title>http-method-label test</title>
 
-  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-  <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
-  <script src="../node_modules/mocha/mocha.js"></script>
-  <script src="../node_modules/chai/chai.js"></script>
-  <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
+  <script src="../../../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../../../@polymer/test-fixture/test-fixture.js"></script>
+  <script src="../../../mocha/mocha.js"></script>
+  <script src="../../../chai/chai.js"></script>
+  <script src="../../../wct-mocha/wct-mocha.js"></script>
 
   <!-- <script type="module" src="../../../@polymer/polymer/lib/legacy/class.js"></script> -->
   <script type="module" src="../http-method-label.js"></script>
@@ -33,65 +33,63 @@
   </test-fixture>
 
   <script type="module">
-// import '../../../@polymer/polymer/lib/legacy/class.js';
-// import '../http-method-label.js';
-suite('basic', function() {
-  test('Has unique colors', function(done) {
-    const elements = fixture('Basic');
-    flush(() => {
-      const colors = [];
-      for (let i = 0, len = elements.length; i < len; i++) {
-        colors.push(getComputedStyle(elements[i]).color);
-      }
-      const filteredArray = elements.filter(function(item, pos) {
-        return elements.indexOf(item) === pos;
+  suite('basic', function() {
+    test('Has unique colors', function(done) {
+      const elements = fixture('Basic');
+      flush(() => {
+        const colors = [];
+        for (let i = 0, len = elements.length; i < len; i++) {
+          colors.push(getComputedStyle(elements[i]).color);
+        }
+        const filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+        done();
       });
-      assert.equal(elements.length, filteredArray.length);
-      done();
+    });
+
+    test('Has unique background colors', function(done) {
+      const elements = fixture('Basic');
+      flush(() => {
+        const colors = [];
+        for (let i = 0, len = elements.length; i < len; i++) {
+          colors.push(getComputedStyle(elements[i]).backgroundColor);
+        }
+        const filteredArray = elements.filter(function(item, pos) {
+          return elements.indexOf(item) === pos;
+        });
+        assert.equal(elements.length, filteredArray.length);
+        done();
+      });
+    });
+
+    test('Sets title attribute on label change', function() {
+      const element = fixture('AriaLabels');
+      assert.isTrue(element.hasAttribute('title'), 'Has title attribute');
+      assert.equal(element.getAttribute('title'), 'get');
+    });
+
+    test('Removes title attribute', function() {
+      const element = fixture('AriaLabels');
+      element.method = undefined;
+      assert.isFalse(element.hasAttribute('title'));
+    });
+
+    test('Sets arial-label attribute on label change', function() {
+      const element = fixture('AriaLabels');
+      assert.isTrue(element.hasAttribute('aria-label'), 'Has arial-label attribute');
+      assert.equal(element.getAttribute('aria-label'), 'get');
+    });
+
+    test('Removes arial-label attribute', function() {
+      const element = fixture('AriaLabels');
+      element.method = undefined;
+      assert.isFalse(element.hasAttribute('aria-label'));
     });
   });
 
-  test('Has unique background colors', function(done) {
-    const elements = fixture('Basic');
-    flush(() => {
-      const colors = [];
-      for (let i = 0, len = elements.length; i < len; i++) {
-        colors.push(getComputedStyle(elements[i]).backgroundColor);
-      }
-      const filteredArray = elements.filter(function(item, pos) {
-        return elements.indexOf(item) === pos;
-      });
-      assert.equal(elements.length, filteredArray.length);
-      done();
-    });
-  });
-
-  test('Sets title attribute on label change', function() {
-    const element = fixture('AriaLabels');
-    assert.isTrue(element.hasAttribute('title'), 'Has title attribute');
-    assert.equal(element.getAttribute('title'), 'get');
-  });
-
-  test('Removes title attribute', function() {
-    const element = fixture('AriaLabels');
-    element.method = undefined;
-    assert.isFalse(element.hasAttribute('title'));
-  });
-
-  test('Sets arial-label attribute on label change', function() {
-    const element = fixture('AriaLabels');
-    assert.isTrue(element.hasAttribute('aria-label'), 'Has arial-label attribute');
-    assert.equal(element.getAttribute('aria-label'), 'get');
-  });
-
-  test('Removes arial-label attribute', function() {
-    const element = fixture('AriaLabels');
-    element.method = undefined;
-    assert.isFalse(element.hasAttribute('aria-label'));
-  });
-});
-
-// a11ySuite('AriaLabels');
-</script>
+  // a11ySuite('AriaLabels');
+  </script>
 </body>
 </html>

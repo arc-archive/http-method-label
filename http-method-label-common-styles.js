@@ -1,7 +1,6 @@
-import '@polymer/polymer/polymer-element.js';
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<dom-module id="http-method-label-common-styles">
+import '../../@polymer/polymer/polymer-element.js';
+const $documentContainer = document.createElement('template');
+$documentContainer.innerHTML = `<dom-module id="http-method-label-common-styles">
   <template>
     <style>
     :host {
@@ -129,4 +128,4 @@ $_documentContainer.innerHTML = `<dom-module id="http-method-label-common-styles
   </template>
 </dom-module>`;
 
-document.head.appendChild($_documentContainer.content);
+document.head.appendChild($documentContainer.content);
