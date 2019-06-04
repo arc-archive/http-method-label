@@ -1,22 +1,41 @@
 {
-  "name": "@api-components/http-method-label",
-  "version": "2.0.4",
-  "license": "Apache-2.0",
   "description": "A HTTP method name display label for lists",
-  "devDependencies": {
-    "@polymer/gen-typescript-declarations": "^1.5.1"
-  },
-  "private": false,
-  "main": "http-method-label.html",
-  "scripts": {
-    "lint": "polymer lint http-method-label.html",
-    "test-sauce": "polymer test --plugin sauce --job-name \"http-method-label:local-test\"",
-    "test": "polymer test --plugin local",
-    "update-types": "gen-typescript-declarations --deleteExisting --outDir ."
-  },
+  "keywords": [
+    "web-components",
+    "polymer",
+    "http method",
+    "label"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/advanced-rest-client/http-method-label.git"
+  },
+  "name": "@api-components/http-method-label",
+  "version": "3.0.0",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@advanced-rest-client/arc-demo-helper": "^1.0.1",
+    "@advanced-rest-client/testing-karma-sl": "^1.0.2",
+    "@open-wc/testing": "^0.11.1",
+    "@open-wc/testing-karma": "^2.0.0",
+    "@polymer/gen-typescript-declarations": "^1.6.1",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "sinon": "^7.2.3",
+    "webpack-merge": "^4.1.5",
+    "owc-dev-server": "^0.4.3"
+  },
+  "main": "http-method-label.js",
+  "module": "http-method-label.js",
+  "scripts": {
+    "start": "owc-dev-server -o",
+    "test": "karma start --coverage",
+    "update-types": "gen-typescript-declarations --deleteExisting --outDir .",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots",
+    "test:legacy": "karma start --legacy --coverage",
+    "test:legacy:watch": "karma start --legacy --auto-watch=true --single-run=false",
+    "test:sl": "karma start karma.sl.config.js --legacy --coverage"
   },
   "bugs": {
     "url": "https://github.com/advanced-rest-client/http-method-label/issues",
@@ -25,5 +44,13 @@
   "authors": [
     "Pawel Psztyc",
     "The Advanced REST client authors <arc@mulesoft.com>"
-  ]
+  ],
+  "contributors": [
+    "Pawel Psztyc",
+    "The Advanced REST client authors <arc@mulesoft.com>"
+  ],
+  "dependencies": {
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
+  }
 }
