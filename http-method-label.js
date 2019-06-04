@@ -11,9 +11,18 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations under
 the License.
 */
-import {PolymerElement} from '../../@polymer/polymer/polymer-element.js';
-import {html} from '../../@polymer/polymer/lib/utils/html-tag.js';
-import './http-method-label-common-styles.js';
+import { LitElement, html, css } from 'lit-element';
+import { hostDefaultStyles,
+  labelCommon,
+  labelGet,
+  labelPost,
+  labelPut,
+  labelDelete,
+  labelPatch,
+  labelOptions,
+  labelHead,
+  labelTrace,
+  labelConnect } from './http-method-label-common-styles.js';
 /**
  * The element displays a label for the HTTP method. If the method is one of the
  * predefined methods then it will use predefined colors to mark the method.
@@ -75,56 +84,52 @@ import './http-method-label-common-styles.js';
  * `--http-method-label-connect` | Mixin applied to the `CONNECT` HTTP method | `{}`
  * `--http-method-label-connect-color` | Color of the `CONNECT` HTTP method | `rgb(128, 128, 128)`
  * `--http-method-label-connect-background-color` | Background color of the `CONNECT` HTTP method | `rgba(128, 128, 128, 0.12)`
- *
- * @polymer
  * @customElement
  * @memberof UiElements
  * @demo demo/index.html
  */
-class HttpMethodLabel extends PolymerElement {
-  static get template() {
-    return html`<style include="http-method-label-common-styles">
-    :host {
-      @apply --method-label-common-style;
+class HttpMethodLabel extends LitElement {
+  static get styles() {
+    return css`:host {
+      ${hostDefaultStyles}
+      ${labelCommon}
     }
 
     :host([method="get"]) {
-      @apply --method-label-get;
+      ${labelGet}
     }
 
     :host([method="post"]) {
-      @apply --method-label-post;
+      ${labelPost}
     }
 
     :host([method="put"]) {
-      @apply --method-label-put;
+      ${labelPut}
     }
 
     :host([method="delete"]) {
-      @apply --method-label-delete;
+      ${labelDelete}
     }
 
     :host([method="patch"]) {
-      @apply --method-label-patch;
+      ${labelPatch}
     }
 
     :host([method="options"]) {
-      @apply --method-label-options;
+      ${labelOptions}
     }
 
     :host([method="head"]) {
-      @apply --method-label-head;
+      ${labelHead}
     }
 
     :host([method="trace"]) {
-      @apply --method-label-trace;
+      ${labelTrace}
     }
 
     :host([method="connect"]) {
-      @apply --method-label-connect;
-    }
-    </style>
-    [[method]]`;
+      ${labelConnect}
+    }`;
   }
 
   static get properties() {
@@ -134,10 +139,22 @@ class HttpMethodLabel extends PolymerElement {
        */
       method: {
         type: String,
-        reflectToAttribute: true,
-        observer: '_updateAccessibility'
+        reflect: true
       }
     };
+  }
+
+  set method(value) {
+    this._method = value;
+    this._updateAccessibility(value);
+  }
+
+  get method() {
+    return this._method;
+  }
+
+  render() {
+    return html`${this.method}`;
   }
   /**
    * Updates "title" and `aria-label` atrributes when method changes.

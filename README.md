@@ -42,10 +42,10 @@ npm install --save @api-components/http-method-label
 </html>
 ```
 
-### In a Polymer 3 element
+### In a web component element
 
 ```js
-import {PolymerElement, html} from '@polymer/polymer';
+import { LitElement, html, css } from 'lit-element';
 import '@api-components/http-method-label/http-method-label.js';
 
 class SampleElement extends PolymerElement {
@@ -58,23 +58,21 @@ class SampleElement extends PolymerElement {
 customElements.define('sample-element', SampleElement);
 ```
 
-### Installation
+### Development
 
 ```sh
 git clone https://github.com/advanced-rest-client/http-method-label
-cd api-url-editor
+cd http-method-label
 npm install
-npm install -g polymer-cli
 ```
 
 ### Running the demo locally
 
 ```sh
-polymer serve --npm
-open http://127.0.0.1:<port>/demo/
+npm start
 ```
 
 ### Running the tests
 ```sh
-polymer test --npm
+npm test
 ```

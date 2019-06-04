@@ -10,8 +10,9 @@
 
 
 // tslint:disable:variable-name Describing an API that's defined elsewhere.
+// tslint:disable:no-any describes the API as best we are able today
 
-import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {LitElement, html, css} from 'lit-element';
 
 declare namespace UiElements {
 
@@ -77,12 +78,14 @@ declare namespace UiElements {
    * `--http-method-label-connect-color` | Color of the `CONNECT` HTTP method | `rgb(128, 128, 128)`
    * `--http-method-label-connect-background-color` | Background color of the `CONNECT` HTTP method | `rgba(128, 128, 128, 0.12)`
    */
-  class HttpMethodLabel extends PolymerElement {
+  class HttpMethodLabel extends LitElement {
 
     /**
      * HTTP method name to display
      */
     method: string|null|undefined;
+    constructor();
+    render(): any;
 
     /**
      * Updates "title" and `aria-label` atrributes when method changes.
