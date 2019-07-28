@@ -103,3 +103,12 @@
 
 
 
+# 3.0.0 (2019-07-28)
+
+
+### Bug Fixes
+
+* fixing npm audit errors ([82a8ee1](https://github.com/advanced-rest-client/http-method-label/commit/82a8ee1))
+
+
+
