@@ -1,11 +1,13 @@
-import { fixture, assert } from '@open-wc/testing';
+import { fixture, assert, nextFrame } from '@open-wc/testing';
+import * as sinon from 'sinon/pkg/sinon-esm.js';
 import '../http-method-label.js';
 
 describe('<http-method-label>', () => {
   function listTargets(first) {
     const elements = [first];
     let target = first;
-    while (true) {
+    const val = true;
+    while (val) {
       const next = target && target.nextElementSibling;
       if (next) {
         elements.push(next);
@@ -16,6 +18,7 @@ describe('<http-method-label>', () => {
     }
     return elements;
   }
+
   it('Has unique colors', async () => {
     const first = await fixture(`<http-method-label method="get"></http-method-label>
     <http-method-label method="POST"></http-method-label>
@@ -74,5 +77,24 @@ describe('<http-method-label>', () => {
     const element = await fixture(`<http-method-label method="get"></http-method-label>`);
     element.method = undefined;
     assert.isFalse(element.hasAttribute('aria-label'));
+  });
+
+  it('Updates rendered label when method change', async () => {
+    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    element.method = 'post';
+    await nextFrame();
+    assert.equal(element.shadowRoot.textContent.trim(), 'post');
+  });
+
+  it('ignores update when method value is the same', async () => {
+    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const spy = sinon.spy(element, '_updateAccessibility');
+    element.method = 'get';
+    assert.isFalse(spy.called);
+  });
+
+  it('can be initialized manually', () => {
+    const element = document.createElement('http-method-label');
+    element.method = 'get';
   });
 });

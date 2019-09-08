@@ -23,6 +23,7 @@ import { hostDefaultStyles,
   labelHead,
   labelTrace,
   labelConnect } from './http-method-label-common-styles.js';
+/* eslint-disable max-len */
 /**
  * The element displays a label for the HTTP method. If the method is one of the
  * predefined methods then it will use predefined colors to mark the method.
@@ -145,7 +146,12 @@ class HttpMethodLabel extends LitElement {
   }
 
   set method(value) {
+    const old = this._method;
+    if (old === value) {
+      return;
+    }
     this._method = value;
+    this.requestUpdate('method', old);
     this._updateAccessibility(value);
   }
 
