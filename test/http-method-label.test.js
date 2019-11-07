@@ -79,11 +79,12 @@ describe('<http-method-label>', () => {
     assert.isFalse(element.hasAttribute('aria-label'));
   });
 
-  it('Updates rendered label when method change', async () => {
+  it('updates rendered label when method change', async () => {
     const element = await fixture(`<http-method-label method="get"></http-method-label>`);
     element.method = 'post';
     await nextFrame();
-    assert.equal(element.shadowRoot.textContent.trim(), 'post');
+    await nextFrame();
+    assert.include(element.shadowRoot.innerHTML.trim(), '</style>post');
   });
 
   it('ignores update when method value is the same', async () => {

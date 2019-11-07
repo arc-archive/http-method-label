@@ -90,7 +90,7 @@ import { hostDefaultStyles,
  * @demo demo/index.html
  */
 class HttpMethodLabel extends LitElement {
-  static get styles() {
+  get styles() {
     return css`:host {
       ${hostDefaultStyles}
       ${labelCommon}
@@ -160,7 +160,7 @@ class HttpMethodLabel extends LitElement {
   }
 
   render() {
-    return html`${this.method}`;
+    return html`<style>${this.styles}</style>${this.method}`;
   }
   /**
    * Updates "title" and `aria-label` atrributes when method changes.
