@@ -112,3 +112,13 @@
 
 
 
+## 3.0.2 (2019-11-07)
+
+
+### Bug Fixes
+
+* fixing label update when changing method value ([70fe7f4](https://github.com/advanced-rest-client/http-method-label/commit/70fe7f484f61a00b960669ba3ea930445e1290c1))
+* fixing npm audit errors ([82a8ee1](https://github.com/advanced-rest-client/http-method-label/commit/82a8ee19c609fcad90a7275fb2987444e9892e31))
+
+
+
