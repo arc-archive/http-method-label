@@ -172,3 +172,26 @@
  [2b977f9](https://github.com/advanced-rest-client/http-method-label/commit/2b977f93b51c95761ea6933880a0c8c22d92ffdf) by Pawel Psztyc
 
 
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/advanced-rest-client/http-method-label/compare/3.0.2...3.1.1) (2020-05-13)
+
+### Build
+
+* bumping version [1cc924e](https://github.com/advanced-rest-client/http-method-label/commit/1cc924e9b6681e2ad8908bf34db4210697f304b5) by Pawel
+
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [941922e](https://github.com/advanced-rest-client/http-method-label/commit/941922e8d6360a8475d74a38cb93b0a6a1c7f420) by Ci agent
+
+
+### Bug Fixes
+
+* fixing index exports [46989e0](https://github.com/advanced-rest-client/http-method-label/commit/46989e086bcbc4cb97ba020ffe4123a3e38399d3) by Pawel
+
+
+### Refactor
+
+* refactoring to open-wc standards [85326b0](https://github.com/advanced-rest-client/http-method-label/commit/85326b0d1c7cdcaee39be0c608d6a80ead6f6f61) by Pawel
+
+
