@@ -1,6 +1,8 @@
 import { fixture, assert, nextFrame } from '@open-wc/testing';
-import * as sinon from 'sinon/pkg/sinon-esm.js';
+import * as sinon from 'sinon';
 import '../http-method-label.js';
+
+/* eslint-disable no-plusplus */
 
 describe('<http-method-label>', () => {
   function listTargets(first) {
@@ -31,7 +33,7 @@ describe('<http-method-label>', () => {
     for (let i = 0, len = elements.length; i < len; i++) {
       colors.push(getComputedStyle(elements[i]).color);
     }
-    const filteredArray = elements.filter(function(item, pos) {
+    const filteredArray = elements.filter((item, pos) => {
       return elements.indexOf(item) === pos;
     });
     assert.equal(elements.length, filteredArray.length);
@@ -49,38 +51,51 @@ describe('<http-method-label>', () => {
     for (let i = 0, len = elements.length; i < len; i++) {
       colors.push(getComputedStyle(elements[i]).backgroundColor);
     }
-    const filteredArray = elements.filter(function(item, pos) {
+    const filteredArray = elements.filter((item, pos) => {
       return elements.indexOf(item) === pos;
     });
     assert.equal(elements.length, filteredArray.length);
   });
 
   it('Sets title attribute on label change', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
     assert.isTrue(element.hasAttribute('title'), 'Has title attribute');
     assert.equal(element.getAttribute('title'), 'get');
   });
 
   it('Removes title attribute', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
     element.method = undefined;
     assert.isFalse(element.hasAttribute('title'));
   });
 
   it('Sets arial-label attribute on label change', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
-    assert.isTrue(element.hasAttribute('aria-label'), 'Has arial-label attribute');
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
+    assert.isTrue(
+      element.hasAttribute('aria-label'),
+      'Has arial-label attribute'
+    );
     assert.equal(element.getAttribute('aria-label'), 'get');
   });
 
   it('Removes arial-label attribute', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
     element.method = undefined;
     assert.isFalse(element.hasAttribute('aria-label'));
   });
 
   it('updates rendered label when method change', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
     element.method = 'post';
     await nextFrame();
     await nextFrame();
@@ -88,7 +103,9 @@ describe('<http-method-label>', () => {
   });
 
   it('ignores update when method value is the same', async () => {
-    const element = await fixture(`<http-method-label method="get"></http-method-label>`);
+    const element = await fixture(
+      `<http-method-label method="get"></http-method-label>`
+    );
     const spy = sinon.spy(element, '_updateAccessibility');
     element.method = 'get';
     assert.isFalse(spy.called);

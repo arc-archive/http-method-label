@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "http-method-label",
+      "description": "A HTTP method name display label for lists",
+      "properties": [
+        {
+          "name": "method",
+          "type": "String",
+          "description": "HTTP method name to render"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": [
+        {
+          "name": "--http-method-label-padding",
+          "description": "Padding of the label item",
+          "default": "2px 6px",
+          "type": "Padding"
+        },
+        {
+          "name": "--http-method-label-color",
+          "description": "Color of the HTTP method",
+          "default": "rgb(128, 128, 128)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-background-color",
+          "description": "Background color of the HTTP method",
+          "default": "rgb(128, 128, 128, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-border-radius",
+          "description": "Border radius on the label",
+          "default": "3px",
+          "type": "BorderRadius"
+        },
+        {
+          "name": "--http-method-label-font-weigth",
+          "description": "Label font weight",
+          "default": "400",
+          "type": "FontWeigth"
+        },
+        {
+          "name": "--http-method-label-get-color",
+          "description": "Color of the `GET` HTTP method",
+          "default": "rgb(0, 128, 0)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-get-background-color",
+          "description": "Background color of the `GET` HTTP method",
+          "default": "rgba(0, 128, 0, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-post-color",
+          "description": "Color of the `POST` HTTP method",
+          "default": "rgb(33, 150, 243)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-post-background-color",
+          "description": "Background color of the `POST` HTTP method",
+          "default": "rgba(33, 150, 243, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-put-color",
+          "description": "Color of the `PUT` HTTP method",
+          "default": "rgb(255, 165, 0)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-put-background-color",
+          "description": "Background color of the `PUT` HTTP method",
+          "default": "rgba(255, 165, 0, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-delete-color",
+          "description": "Color of the `DELETE` HTTP method",
+          "default": "rgb(244, 67, 54)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-delete-background-color",
+          "description": "Background color of the `DELETE` HTTP method",
+          "default": "rgba(244, 67, 54, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-patch-color",
+          "description": "Color of the `DELETE` HTTP method",
+          "default": "rgb(156, 39, 176)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-patch-background-color",
+          "description": "Background color of the `PATCH` HTTP method",
+          "default": "rgba(156, 39, 176, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-options-color",
+          "description": "Color of the `OPTIONS` HTTP method",
+          "default": "rgb(128, 128, 128)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-options-background-color",
+          "description": "Background color of the `OPTIONS` HTTP method",
+          "default": "rgba(128, 128, 128, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-head-color",
+          "description": "Color of the `HEAD` HTTP method",
+          "default": "rgb(128, 128, 128)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-head-background-color",
+          "description": "Background color of the `HEAD` HTTP method",
+          "default": "rgba(128, 128, 128, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-trace-color",
+          "description": "Color of the `TRACE` HTTP method",
+          "default": "rgb(128, 128, 128)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-trace-background-color",
+          "description": "Background color of the `TRACE` HTTP method",
+          "default": "rgba(128, 128, 128, 0.12)",
+          "type": "BackgroundColor"
+        },
+        {
+          "name": "--http-method-label-connect-color",
+          "description": "Color of the `CONNECT` HTTP method",
+          "default": "rgb(128, 128, 128)",
+          "type": "Color"
+        },
+        {
+          "name": "--http-method-label-connect-background-color",
+          "description": "Background color of the `CONNECT` HTTP method",
+          "default": "rgba(128, 128, 128, 0.12)",
+          "type": "BackgroundColor"
+        }
+      ]
+    }
+  ]
+}

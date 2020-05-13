@@ -1,6 +1,6 @@
 [![Published on NPM](https://img.shields.io/npm/v/@api-components/http-method-label.svg)](https://www.npmjs.com/package/@api-components/http-method-label)
 
-[![Build Status](https://travis-ci.org/advanced-rest-client/http-method-label.svg?branch=stage)](https://travis-ci.org/advanced-rest-client/http-method-label)
+[![Build Status](https://travis-ci.com/advanced-rest-client/http-method-label.svg)](https://travis-ci.com/advanced-rest-client/http-method-label)
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/advanced-rest-client/http-method-label)
 
@@ -16,15 +16,11 @@ A HTTP method name display label for lists.
 <http-method-label method="patch"></http-method-label>
 ```
 
-### API components
-
-This components is a part of [API components ecosystem](https://elements.advancedrestclient.com/)
-
 ## Usage
 
 ### Installation
 ```
-npm install --save @api-components/http-method-label
+npm install @api-components/http-method-label --save
 ```
 
 ### In an html file
@@ -58,7 +54,7 @@ class SampleElement extends PolymerElement {
 customElements.define('sample-element', SampleElement);
 ```
 
-### Development
+## Development
 
 ```sh
 git clone https://github.com/advanced-rest-client/http-method-label
