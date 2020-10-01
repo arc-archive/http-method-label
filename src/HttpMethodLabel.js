@@ -51,8 +51,6 @@ import {
  * </style>
  * <http-method-label method="TEST"></http-method-label>
  * ```
- *
- * @demo demo/index.html
  */
 export class HttpMethodLabel extends LitElement {
   get styles() {
@@ -125,13 +123,11 @@ export class HttpMethodLabel extends LitElement {
 
   render() {
     const { styles, method } = this;
-    return html`<style>
-        ${styles}</style
-      >${method}`;
+    return html`<style>${styles}</style>${method}`;
   }
 
   /**
-   * Updates "title" and `aria-label` atrributes when method changes.
+   * Updates "title" and `aria-label` attributes when method changes.
    * @param {string} method Current method
    */
   _updateAccessibility(method) {
