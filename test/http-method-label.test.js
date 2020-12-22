@@ -115,4 +115,34 @@ describe('<http-method-label>', () => {
     const element = document.createElement('http-method-label');
     element.method = 'get';
   });
+
+  describe('AsyncAPI methods', () => {
+    it('Has unique colors', async () => {
+      const first = await fixture(`<http-method-label method="publish"></http-method-label>
+      <http-method-label method="SUBSCRIBE"></http-method-label>`);
+      const elements = listTargets(first);
+      const colors = [];
+      for (let i = 0, len = elements.length; i < len; i++) {
+        colors.push(getComputedStyle(elements[i]).color);
+      }
+      const filteredArray = elements.filter((item, pos) => {
+        return elements.indexOf(item) === pos;
+      });
+      assert.equal(elements.length, filteredArray.length);
+    });
+
+    it('Has unique background colors', async () => {
+      const first = await fixture(`<http-method-label method="publish"></http-method-label>
+      <http-method-label method="SUBSCRIBE"></http-method-label>`);
+      const elements = listTargets(first);
+      const colors = [];
+      for (let i = 0, len = elements.length; i < len; i++) {
+        colors.push(getComputedStyle(elements[i]).backgroundColor);
+      }
+      const filteredArray = elements.filter((item, pos) => {
+        return elements.indexOf(item) === pos;
+      });
+      assert.equal(elements.length, filteredArray.length);
+    });
+  })
 });
