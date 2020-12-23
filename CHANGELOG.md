@@ -210,3 +210,13 @@
 * fixing index exports [46989e0](https://github.com/advanced-rest-client/http-method-label/commit/46989e086bcbc4cb97ba020ffe4123a3e38399d3) by Pawel
 
 
+<a name="3.1.3"></a>
+## [3.1.3](https://github.com/advanced-rest-client/http-method-label/compare/3.1.1...3.1.3) (2020-12-23)
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [4880772](https://github.com/advanced-rest-client/http-method-label/commit/48807729d2dda58b816cc4619ff92427e169bfaa) by Ci agent
+* updating dependencies and types [1c16b08](https://github.com/advanced-rest-client/http-method-label/commit/1c16b08646783c67fc03096bc6c46f5eb0ed8d6c) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [30ef339](https://github.com/advanced-rest-client/http-method-label/commit/30ef339d43e329ac815b30d26a752b6ca6948b13) by Ci agent
+
+
