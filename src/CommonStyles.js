@@ -102,6 +102,22 @@ export const labelConnect = css`
   );
 `;
 
+export const labelPublish = css`
+  background-color: var(
+    --http-method-label-publish-background-color,
+    rgba(31, 157, 85, 0.12)
+  );
+  color: var(--http-method-label-publish-color, #1f9d55);
+`;
+
+export const labelSubscribe = css`
+  background-color: var(
+    --http-method-label-subscribe-background-color,
+    rgba(52, 144, 220, 0.12)
+  );
+  color: var(--http-method-label-subscribe-color, #3490dc);
+`;
+
 export default css`
   :host {
     ${hostDefaultStyles}
@@ -154,5 +170,13 @@ export default css`
   .method-label[data-method='connect'],
   .method-label[data-method='CONNECT'] {
     ${labelConnect}
+  }
+
+  .method-label[data-method='publish'] {
+    ${labelPublish}
+  }
+
+  .method-label[data-method='subscribe'] {
+    ${labelSubscribe}
   }
 `;

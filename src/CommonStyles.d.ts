@@ -22,5 +22,9 @@ export declare const labelTrace:CSSResult;
 
 export declare const labelConnect:CSSResult;
 
+export declare const labelPublish:CSSResult;
+
+export declare const labelSubscribe:CSSResult;
+
 declare const styles: CSSResult;
 export default styles;

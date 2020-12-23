@@ -24,6 +24,8 @@ import {
   labelHead,
   labelTrace,
   labelConnect,
+  labelSubscribe,
+  labelPublish,
 } from './CommonStyles.js';
 
 /* eslint-disable max-len */
@@ -94,6 +96,14 @@ export class HttpMethodLabel extends LitElement {
 
       :host([method='connect']) {
         ${labelConnect}
+      }
+
+      :host([method='subscribe']) {
+        ${labelSubscribe}
+      }
+
+      :host([method='publish']) {
+        ${labelPublish}
       }
     `;
   }
