@@ -6,7 +6,7 @@
 
 ## &lt;http-method-label&gt;
 
-A HTTP method name display label for lists.
+An HTTP method name display label for lists.
 
 ```html
 <http-method-label method="get"></http-method-label>
@@ -19,7 +19,8 @@ A HTTP method name display label for lists.
 ## Usage
 
 ### Installation
-```
+
+```sh
 npm install @api-components/http-method-label --save
 ```
 
@@ -69,6 +70,7 @@ npm start
 ```
 
 ### Running the tests
+
 ```sh
 npm test
 ```
