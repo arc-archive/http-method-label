@@ -1,12 +1,10 @@
+# http-method-label
+
 [![Published on NPM](https://img.shields.io/npm/v/@api-components/http-method-label.svg)](https://www.npmjs.com/package/@api-components/http-method-label)
 
-[![Build Status](https://travis-ci.com/advanced-rest-client/http-method-label.svg)](https://travis-ci.com/advanced-rest-client/http-method-label)
+[![Tests and publishing](https://github.com/advanced-rest-client/http-method-label/actions/workflows/deployment.yml/badge.svg)](https://github.com/advanced-rest-client/http-method-label/actions/workflows/deployment.yml)
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/advanced-rest-client/http-method-label)
-
-## &lt;http-method-label&gt;
-
-A HTTP method name display label for lists.
+An HTTP method name display label for lists.
 
 ```html
 <http-method-label method="get"></http-method-label>
@@ -19,7 +17,8 @@ A HTTP method name display label for lists.
 ## Usage
 
 ### Installation
-```
+
+```sh
 npm install @api-components/http-method-label --save
 ```
 
@@ -69,6 +68,7 @@ npm start
 ```
 
 ### Running the tests
+
 ```sh
 npm test
 ```

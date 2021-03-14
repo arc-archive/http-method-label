@@ -18,7 +18,9 @@ export const labelCommon = css`
   border-radius: var(--http-method-label-border-radius, 3px);
   font-weight: var(--http-method-label-font-weigth, 400);
   font: inherit;
-  font-size: inherit;
+  font-size: var(--http-method-label-font-size, inherit);
+  min-width: var(--http-method-label-min-width, inherit);
+  text-align: var(--http-method-label-text-align, inherit);
 `;
 
 export const labelGet = css`
